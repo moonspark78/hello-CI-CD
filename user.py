@@ -29,7 +29,7 @@ def calculate_age(birth_year):
 
 
 def is_adult(age):
-    return age > 18
+    return age >= 18
 
 
 def is_valid_email(email):
