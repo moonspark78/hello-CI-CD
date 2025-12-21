@@ -11,7 +11,7 @@ def test_create_user_success():
     user = create_user(
         first_name="Matis",
         last_name="Dupond",
-        birth_year=1998,
+        birth_year=2000,
         email="matis@test.com"
     )
 
@@ -25,7 +25,7 @@ def test_create_user_invalid_email():
         create_user(
             first_name="Matis",
             last_name="Dupond",
-            birth_year=1998,
+            birth_year=2000,
             email="email-invalide"
         )
 
