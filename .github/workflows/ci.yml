@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Vérifier la version de Python
+        run: python --version
+
       - name: Checkout du code
         uses: actions/checkout@v4
 
