@@ -9,7 +9,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    
+
     timeout-minutes: 5
 
     steps:
@@ -30,5 +30,11 @@ jobs:
       - name: Afficher l'environnement
         run: echo "ENV = $APP_ENV"
 
+      - name: Sauver les résultats
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: . 
+          
       - name: Lancer les tests
         run: pytest
