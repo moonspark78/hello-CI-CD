@@ -75,3 +75,6 @@ def test_email_validation_no_dot():
     
 def test_email_validation_no_at():
     assert is_valid_email("testmail.com") is False  
+    
+def test_email_validation_empty():
+    assert is_valid_email("") is False
