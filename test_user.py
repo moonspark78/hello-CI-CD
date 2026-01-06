@@ -86,3 +86,11 @@ def test_create_user_edge_case_adult():
         birth_year=datetime.now().year - 18,
         email="",
     )
+
+def test_create_user_edge_case_not_adult():
+    user = create_user(
+        first_name="Bob",
+        last_name="Lemoine",
+        birth_year=datetime.now().year - 17,
+        email="",
+    )
