@@ -56,6 +56,10 @@ def test_calculate_age_future_year():
     with pytest.raises(ValueError):
         calculate_age(3000)
 
+def test_calculate_age_current_year():
+    current_year = datetime.now().year
+    age = calculate_age(current_year)
+    assert age == 0
 
 def test_is_adult():
     assert is_adult(18) is True
