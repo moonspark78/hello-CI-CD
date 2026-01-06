@@ -34,6 +34,14 @@ def test_calculate_age():
     age = calculate_age(2000)
     assert age > 20
 
+def test_create_user_missing_name():
+    with pytest.raises(ValueError):
+        create_user(
+            first_name="",
+            last_name="Dupond",
+            birth_year=2000,
+            email="",
+        )
 
 def test_calculate_age_future_year():
     with pytest.raises(ValueError):
