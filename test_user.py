@@ -43,6 +43,15 @@ def test_create_user_missing_name():
             email="",
         )
 
+def test_create_user_missing_email():
+    with pytest.raises(ValueError):
+        create_user(
+            first_name="Matis",
+            last_name="Dupond",
+            birth_year=2000,
+            email="",
+        )
+
 def test_calculate_age_future_year():
     with pytest.raises(ValueError):
         calculate_age(3000)
