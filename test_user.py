@@ -78,3 +78,11 @@ def test_email_validation_no_at():
     
 def test_email_validation_empty():
     assert is_valid_email("") is False
+    
+def test_create_user_edge_case_adult():
+    user = create_user(
+        first_name="Alice",
+        last_name="Martin",
+        birth_year=datetime.now().year - 18,
+        email="",
+    )
