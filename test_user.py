@@ -69,3 +69,6 @@ def test_is_adult():
 def test_email_validation():
     assert is_valid_email("test@mail.com") is True
     assert is_valid_email("testmail.com") is False
+
+def test_email_validation_no_dot():
+    assert is_valid_email("test@mailcom") is False
