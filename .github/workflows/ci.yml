@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     timeout-minutes: 5
+    env:
+      APP_ENV: test
 
     steps:
       - name: Vérifier la version de Python
@@ -35,6 +37,5 @@ jobs:
         with:
           name: test-results
           path: . 
-          
       - name: Lancer les tests
         run: pytest
